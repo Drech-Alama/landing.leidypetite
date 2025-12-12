@@ -1,0 +1,104 @@
+import React, { useState } from "react";
+
+export default function GaleriaResponsive() {
+  const images = [
+    "/img/vestido1.jpeg",
+    "/img/vestido2.jpeg",
+    "/img/vestido3.jpeg",
+    "/img/vestido4.jpeg",
+    "/img/vestido5.jpeg",
+    "/img/vestido6.jpeg",
+    "/img/vestido7.jpeg",
+    "/img/vestido8.jpeg",
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const nextImage = () => {
+    setIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <section className="w-full py-20" id="garments">
+      {/* --- TITLE & PARAGRAPH --- */}
+      <div className="max-w-3xl mx-auto text-center mb-10 px-4">
+        <h2 className="text-3xl font-bold text-gray-900 mb-3">
+          Moda Petite: Diseñada para Ti
+        </h2>
+        <p className="text-gray-600 text-lg leading-relaxed">
+          Las prendas petite están pensadas para resaltar tu figura con
+          proporciones perfectas y cortes estilizados. Encuentra piezas que
+          realzan tu estilo, te brindan comodidad y te hacen lucir increíble en
+          cualquier ocasión.
+        </p>
+      </div>
+
+      {/* --- MOBILE VERSION (Slider) --- */}
+      <div className="sm:hidden relative w-full h-1/2 overflow-hidden">
+        <img
+          src={images[index]}
+          className="w-full h-full object-cover rounded-xl"
+          alt="slide"
+        />
+
+        {/* Left arrow */}
+        <button
+          onClick={prevImage}
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        {/* Right arrow */}
+        <button
+          onClick={nextImage}
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* --- DESKTOP VERSION (Grid) --- */}
+      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {images.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            className="w-full h-full object-cover rounded-xl shadow-md"
+            alt=""
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
