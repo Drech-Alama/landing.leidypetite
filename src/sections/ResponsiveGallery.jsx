@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 export default function GaleriaResponsive() {
   const images = [
-    "/img/vestido1.jpeg",
-    "/img/vestido2.jpeg",
-    "/img/vestido3.jpeg",
-    "/img/vestido4.jpeg",
-    "/img/vestido5.jpeg",
-    "/img/vestido6.jpeg",
-    "/img/vestido7.jpeg",
-    "/img/vestido8.jpeg",
+    "/img/img1.jpeg",
+    "/img/img2.jpeg",
+    "/img/img3.jpeg",
+    "/img/img4.jpeg",
+    "/img/img5.jpeg",
+    "/img/img6.jpeg",
+    "/img/img7.jpeg",
+    "/img/img8.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -23,7 +23,7 @@ export default function GaleriaResponsive() {
   };
 
   return (
-    <section className="w-full py-32" id="garments">
+    <section className="w-full py-10" id="garments">
       {/* --- TITLE & PARAGRAPH --- */}
       <div className="max-w-3xl mx-auto text-center mb-10 px-4">
         <h2 className="text-3xl font-bold text-gray-900 mb-3">

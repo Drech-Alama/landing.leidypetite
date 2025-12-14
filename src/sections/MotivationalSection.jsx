@@ -48,7 +48,7 @@ export default function MotivationalSection({
         <div className="p-6 h-[500px]  md:h-[450px] rounded-2xl shadow-lg border border-gray-100">
           <div className="flex flex-col gap-4">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                 Frases que inspiran tu estilo
               </h2>
               <p className="mt-2 text-sm text-gray-500">

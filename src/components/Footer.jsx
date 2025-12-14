@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer
-      className="w-full text-white py-8"
+      className="w-full py-8"
       style={{ backgroundColor: "var(--color-claro)" }}
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
@@ -15,6 +15,7 @@ export default function Footer() {
             href="https://wa.me/51912245169"
             target="_blank"
             rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-110 hover:text-[#25D366]"
           >
             <svg
               className="w-7 h-7 text-[var(--color-medio)]"
@@ -28,9 +29,10 @@ export default function Footer() {
 
           {/* TikTok */}
           <a
-            href="https://www.tiktok.com/@leidyfloresyovera?_r=1&_t=ZS-927cVSruS7L"
+            href="https://www.tiktok.com/@jaquifloresyovera1"
             target="_blank"
             rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-110 hover:text-black"
           >
             <svg
               className="w-7 h-7 text-[var(--color-medio)]"
@@ -46,6 +48,7 @@ export default function Footer() {
             href="https://www.instagram.com/leidy_jaqueline_2003/"
             target="_blank"
             rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-110 hover:text-pink-500"
           >
             <svg
               className="w-7 h-7 text-[var(--color-medio)]"
@@ -65,6 +68,7 @@ export default function Footer() {
             href="https://www.facebook.com/leydi.floresyovera"
             target="_blank"
             rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-110 hover:text-blue-600"
           >
             <svg
               className="w-7 h-7 text-[var(--color-medio)]"
