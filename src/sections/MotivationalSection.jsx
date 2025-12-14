@@ -40,12 +40,12 @@ export default function MotivationalSection({
 
   return (
     <section
-      className={`w-full py-12 px-6 md:px-12 lg:px-24 ${className}`}
+      className={`w-full py-32 px-6 md:px-12 lg:px-24 ${className}`}
       id="foryou"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Hero con frase rotante */}
-        <div className="bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-md p-8 rounded-2xl shadow-md">
+        <div className="p-6 h-[500px]  md:h-[450px] rounded-2xl shadow-lg border border-gray-100">
           <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
@@ -79,12 +79,14 @@ export default function MotivationalSection({
                     key={i}
                     aria-label={`Mostrar frase ${i + 1}`}
                     onClick={() => setIndex(i)}
-                    className={`w-3 h-3 rounded-full transition-transform transform ${
-                      i === index ? "scale-110" : "opacity-40"
+                    className={`w-3 h-3 rounded-full transition-transform transform cursor-pointer  ${
+                      i === index ? "scale-110" : "opacity-60"
                     }`}
                     style={{
                       backgroundColor:
-                        i === index ? "var(--color-primario)" : "#cbd5e1",
+                        i === index
+                          ? "var(--color-medio)"
+                          : "var(--color-claro)",
                     }}
                   />
                 ))}
@@ -100,7 +102,7 @@ export default function MotivationalSection({
               </a>
               <a
                 href="#contact"
-                className="inline-block px-4 py-2 rounded-lg font-medium border"
+                className="inline-block px-4 py-2 rounded-lg font-medium border border-[var(--color-medio)]"
               >
                 Contáctanos
               </a>
@@ -109,20 +111,22 @@ export default function MotivationalSection({
         </div>
 
         {/* Lista de propuestas de valor */}
-        <div className="p-6 md:p-10 rounded-2xl border border-gray-100 shadow-sm bg-white">
+        <div className="p-6 h-[530px] md:h-[450px] rounded-2xl border border-[var(--color-claro)] shadow-lg bg-[var(--color-claro)]">
           <h3 className="text-xl font-bold">Por qué nos eligen</h3>
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="text-sm mt-1">
             Propuestas pensadas para quienes buscan fit real y cómodo.
           </p>
 
           <ul className="mt-6 space-y-4">
             {valueProps.map((vp, i) => (
               <li key={i} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center border">
-                  <span className="text-sm font-bold">{i + 1}</span>
-                </div>
-                <div>
-                  <p className="font-medium">{vp}</p>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg">
+                    <span className="text-sm font-bold">{i + 1}</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">{vp}</p>
+                  </div>
                 </div>
               </li>
             ))}
@@ -131,7 +135,7 @@ export default function MotivationalSection({
           <div className="mt-6">
             <a
               href="#garments"
-              className="inline-block px-4 py-2 rounded-lg font-medium shadow-sm bg-white border"
+              className="inline-block bg-white text-[var(--color-negro)] border border-[var(--color-medio)] px-4 py-2 rounded-lg font-medium shadow-lg"
             >
               Explora la colección petite
             </a>

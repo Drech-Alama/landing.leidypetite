@@ -6,26 +6,25 @@ export default function Hero() {
     >
       {/* Fondo */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-40"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=80')",
+          backgroundImage: "url('/img/hero.JPG')",
         }}
       ></div>
 
       {/* Contenido */}
       <div className="relative z-10 text-center px-6 max-w-2xl">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          La verdadera moda comienza donde nace la actitud.
+          Moda Petite Diseñada para Mujeres de Tallas Pequeñas
         </h1>
 
-        <p className="mt-4 text-lg md:text-xl text-gray-200">
-          Inspira, crea y transforma tu estilo cada día.
+        <p className="mt-4 text-lg md:text-xl text-white">
+          Prendas diseñadas para mujeres petite: Mejor fit, estilo y comodidad.
         </p>
 
         <a
-          href="#contacto"
-          className="mt-8 inline-block px-8 py-3 bg-[#676D59] text-white rounded-lg text-lg font-medium transition"
+          href="#"
+          className="mt-8 inline-block px-8 py-3 bg-[var(--color-medio)] shadow-lg text-white rounded-lg text-lg font-medium transition"
         >
           Visita nuestro sitio web
         </a>

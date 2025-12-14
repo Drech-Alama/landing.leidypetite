@@ -58,7 +58,7 @@ export default function Header() {
           <li>
             <a
               href="#hero"
-              className={`font-bold text-xl transition-all ${
+              className={`font-bold text-xl transition-all block py-4 ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
@@ -68,7 +68,7 @@ export default function Header() {
           <li>
             <a
               href="#foryou"
-              className={`font-bold text-xl transition-all ${
+              className={`font-bold text-xl transition-all block py-4 ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
@@ -78,7 +78,7 @@ export default function Header() {
           <li>
             <a
               href="#garments"
-              className={`font-bold text-xl transition-all ${
+              className={`font-bold text-xl transition-all block py-4 ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >
@@ -88,7 +88,7 @@ export default function Header() {
           <li>
             <a
               href="#contact"
-              className={`font-bold text-xl transition-all ${
+              className={`font-bold text-xl transition-all block py-4 ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >

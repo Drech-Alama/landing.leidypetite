@@ -5,6 +5,7 @@ import Form from "./components/Form";
 import ResponsiveGallery from "./sections/ResponsiveGallery";
 import Hero from "./sections/Hero";
 import MotivationalSection from "./sections/MotivationalSection";
+import ButtonWhatsapp from "./components/ButtonWhatsApp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Form />
       </main>
       <Footer />
+      <ButtonWhatsapp />
     </>
   );
 }

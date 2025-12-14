@@ -23,7 +23,7 @@ export default function GaleriaResponsive() {
   };
 
   return (
-    <section className="w-full py-20" id="garments">
+    <section className="w-full py-32" id="garments">
       {/* --- TITLE & PARAGRAPH --- */}
       <div className="max-w-3xl mx-auto text-center mb-10 px-4">
         <h2 className="text-3xl font-bold text-gray-900 mb-3">
@@ -35,20 +35,26 @@ export default function GaleriaResponsive() {
           realzan tu estilo, te brindan comodidad y te hacen lucir increíble en
           cualquier ocasión.
         </p>
+        <a
+          href="#"
+          className="mt-8 inline-block px-8 py-3 bg-[var(--color-medio)] shadow-lg text-white rounded-lg text-lg font-medium transition"
+        >
+          Visita nuestro sitio web
+        </a>
       </div>
 
       {/* --- MOBILE VERSION (Slider) --- */}
-      <div className="sm:hidden relative w-full h-1/2 overflow-hidden">
+      <div className="sm:hidden relative w-full h-1/2 overflow-hidden px-5">
         <img
           src={images[index]}
-          className="w-full h-full object-cover rounded-xl"
+          className="w-full h-[450px] object-cover rounded-xl"
           alt="slide"
         />
 
         {/* Left arrow */}
         <button
           onClick={prevImage}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow"
+          className="absolute left-8 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +75,7 @@ export default function GaleriaResponsive() {
         {/* Right arrow */}
         <button
           onClick={nextImage}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow"
+          className="absolute right-8 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +95,7 @@ export default function GaleriaResponsive() {
       </div>
 
       {/* --- DESKTOP VERSION (Grid) --- */}
-      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4 mx-16">
         {images.map((img, i) => (
           <img
             key={i}
