@@ -125,7 +125,9 @@ export default function MotivationalSection({
           viewport={{ once: true, amount: 0.3 }}
           className="p-6 h-[530px] md:h-[450px] rounded-2xl border border-[var(--color-claro)] shadow-lg bg-[var(--color-claro)]"
         >
-          <h3 className="text-xl font-bold">Por qué nos eligen</h3>
+          <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+            Por qué nos eligen
+          </h3>
           <p className="text-sm mt-1">
             Propuestas pensadas para quienes buscan fit real y cómodo.
           </p>
