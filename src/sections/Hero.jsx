@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { bottomToTop } from "../animations/scrollVariants";
+
 export default function Hero() {
   return (
     <section
@@ -13,7 +16,13 @@ export default function Hero() {
       ></div>
 
       {/* Contenido */}
-      <div className="relative z-10 text-center px-6 max-w-2xl">
+      <motion.div
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }} // Se activa cuando el 30% del div entra en vista
+        className="relative z-10 text-center px-6 max-w-2xl"
+      >
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           Moda Petite Diseñada para Mujeres de Tallas Pequeñas
         </h1>
@@ -28,7 +37,7 @@ export default function Hero() {
         >
           Visita nuestro sitio web
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

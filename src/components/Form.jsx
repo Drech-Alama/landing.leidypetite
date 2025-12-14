@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { bottomToTop } from "../animations/scrollVariants";
 
 export default function Formulario() {
   const [form, setForm] = useState({
@@ -187,7 +189,11 @@ export default function Formulario() {
       className="w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/img/fondo.jpg')" }}
     >
-      <form
+      <motion.form
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
         onSubmit={handleSubmit}
         className="max-w-md mx-auto space-y-4 bg-white px-5 py-7 rounded-lg shadow-xl"
       >
@@ -268,7 +274,7 @@ export default function Formulario() {
         >
           {enviando ? "Enviando..." : "Enviar"}
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 }

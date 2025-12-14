@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { bottomToTop } from "../animations/scrollVariants";
 
 export default function GaleriaResponsive() {
   const images = [
@@ -25,7 +27,13 @@ export default function GaleriaResponsive() {
   return (
     <section className="w-full py-10" id="garments">
       {/* --- TITLE & PARAGRAPH --- */}
-      <div className="max-w-3xl mx-auto text-center mb-10 px-4">
+      <motion.div
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="max-w-3xl mx-auto text-center mb-10 px-4"
+      >
         <h2 className="text-3xl font-bold text-gray-900 mb-3">
           Moda Petite: Diseñada para Ti
         </h2>
@@ -41,10 +49,16 @@ export default function GaleriaResponsive() {
         >
           Visita nuestro sitio web
         </a>
-      </div>
+      </motion.div>
 
       {/* --- MOBILE VERSION (Slider) --- */}
-      <div className="sm:hidden relative w-full h-1/2 overflow-hidden px-5">
+      <motion.div
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="sm:hidden relative w-full h-1/2 overflow-hidden px-5"
+      >
         <img
           src={images[index]}
           className="w-full h-[450px] object-cover rounded-xl"
@@ -92,10 +106,16 @@ export default function GaleriaResponsive() {
             />
           </svg>
         </button>
-      </div>
+      </motion.div>
 
       {/* --- DESKTOP VERSION (Grid) --- */}
-      <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4 mx-16">
+      <motion.div
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4 mx-16"
+      >
         {images.map((img, i) => (
           <img
             key={i}
@@ -104,7 +124,7 @@ export default function GaleriaResponsive() {
             alt=""
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

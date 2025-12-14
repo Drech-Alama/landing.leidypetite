@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { leftToRight, rightToLeft } from "../animations/scrollVariants";
 
 // Componente: MotivationalSection
 // Uso: import MotivationalSection from './MotivationalSection';
@@ -45,7 +46,13 @@ export default function MotivationalSection({
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Hero con frase rotante */}
-        <div className="p-6 h-[500px]  md:h-[450px] rounded-2xl shadow-lg border border-gray-100">
+        <motion.div
+          variants={leftToRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="p-6 h-[500px]  md:h-[450px] rounded-2xl shadow-lg border border-gray-100"
+        >
           <div className="flex flex-col gap-4">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">
@@ -95,10 +102,10 @@ export default function MotivationalSection({
 
             <div className="mt-2 flex gap-3">
               <a
-                href="#catalogo"
+                href="#"
                 className="inline-block px-4 py-2 rounded-lg font-medium shadow-sm bg-[var(--color-medio)] text-white"
               >
-                Ver catálogo
+                Ver sitio web
               </a>
               <a
                 href="#contact"
@@ -108,10 +115,16 @@ export default function MotivationalSection({
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Lista de propuestas de valor */}
-        <div className="p-6 h-[530px] md:h-[450px] rounded-2xl border border-[var(--color-claro)] shadow-lg bg-[var(--color-claro)]">
+        <motion.div
+          variants={rightToLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="p-6 h-[530px] md:h-[450px] rounded-2xl border border-[var(--color-claro)] shadow-lg bg-[var(--color-claro)]"
+        >
           <h3 className="text-xl font-bold">Por qué nos eligen</h3>
           <p className="text-sm mt-1">
             Propuestas pensadas para quienes buscan fit real y cómodo.
@@ -140,7 +153,7 @@ export default function MotivationalSection({
               Explora la colección petite
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
