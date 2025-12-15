@@ -16,7 +16,7 @@ export default function Formulario() {
   const endpoint =
     "https://script.google.com/macros/s/AKfycbyLB4YvIrG_sQAU4Oy0xbFT3yrRQ9Q_qsYhlDQHeZ_ORQ6w5CKgEWkpN4r0i_bnC403/exec";
 
-  const medidas = ["XS", "XM", "XL"];
+  const medidas = ["XS-C", "S-C", "M-C", "LC"];
 
   const provincias = {
     Lima: [
