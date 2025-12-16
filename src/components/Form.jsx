@@ -224,7 +224,7 @@ export default function Formulario() {
           <input
             type="radio"
             name="medida_petite"
-            value="( X - C )"
+            value="( XS - C )"
             checked={form.medida === "( X - C )"}
             onChange={() => setForm({ ...form, medida: "( X - C )" })}
             required
