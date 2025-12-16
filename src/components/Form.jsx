@@ -230,7 +230,7 @@ export default function Formulario() {
             required
             className="hidden"
           />
-          ( X - C )
+          ( XS - C )
         </label>
       
         <label
