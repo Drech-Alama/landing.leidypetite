@@ -5,7 +5,7 @@ import { bottomToTop } from "../animations/scrollVariants";
 export default function Formulario() {
   const [form, setForm] = useState({
     nombre: "",
-    medida_petite: "",
+    medida: "",
     provincia: "",
     distrito: "",
     correo: "",
