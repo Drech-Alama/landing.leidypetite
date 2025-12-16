@@ -208,18 +208,22 @@ export default function Formulario() {
           className="w-full border p-2 rounded"
         />
 
-        <select
+       <select
           name="medida"
           value={form.medida}
           onChange={handleChange}
           required
+          autoComplete="off"
           className="w-full border p-2 rounded"
         >
-          <option value="">Selecciona una medida</option>
+         
+          <option value="" disabled>
+            Selecciona una medida
+          </option>
           <option value="XS-C">XS-C</option>
           <option value="S-C">S-C</option>
           <option value="M-C">M-C</option>
-          <option value="L-C">L-C</option>
+          <option value="LC">LC</option>
         </select>
 
         <select
