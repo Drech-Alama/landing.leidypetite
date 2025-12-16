@@ -211,89 +211,89 @@ export default function Formulario() {
        <div>
   <p className="mb-2 text-sm font-medium">Selecciona una medida</p>
 
-  <div className="grid grid-cols-4 gap-2">
-    <label
-      className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
-        ${
-          form.medida === "XS-C"
-            ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
-            : "bg-white text-gray-700 hover:bg-gray-100"
-        }
-      `}
-    >
-      <input
-        type="radio"
-        name="medida_petite"
-        value="XS-C"
-        checked={form.medida === "XS-C"}
-        onChange={() => setForm({ ...form, medida: "XS-C" })}
-        required
-        className="hidden"
-      />
-      XS-C
-    </label>
+<div className="grid grid-cols-4 gap-2">
+  <label
+    className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
+      ${
+        form.medida === "( X - C )"
+          ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
+          : "bg-white text-gray-700 hover:bg-gray-100"
+      }
+    `}
+  >
+    <input
+      type="radio"
+      name="medida_petite"
+      value="( X - C )"
+      checked={form.medida === "( X - C )"}
+      onChange={() => setForm({ ...form, medida: "( X - C )" })}
+      required
+      className="hidden"
+    />
+    ( X - C )
+  </label>
 
-    <label
-      className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
-        ${
-          form.medida === "S-C"
-            ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
-            : "bg-white text-gray-700 hover:bg-gray-100"
-        }
-      `}
-    >
-      <input
-        type="radio"
-        name="medida_petite"
-        value="S-C"
-        checked={form.medida === "S-C"}
-        onChange={() => setForm({ ...form, medida: "S-C" })}
-        className="hidden"
-      />
-      S-C
-    </label>
+  <label
+    className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
+      ${
+        form.medida === "( S - C )"
+          ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
+          : "bg-white text-gray-700 hover:bg-gray-100"
+      }
+    `}
+  >
+    <input
+      type="radio"
+      name="medida_petite"
+      value="( S - C )"
+      checked={form.medida === "( S - C )"}
+      onChange={() => setForm({ ...form, medida: "( S - C )" })}
+      className="hidden"
+    />
+    ( S - C )
+  </label>
 
-    <label
-      className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
-        ${
-          form.medida === "M-C"
-            ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
-            : "bg-white text-gray-700 hover:bg-gray-100"
-        }
-      `}
-    >
-      <input
-        type="radio"
-        name="medida_petite"
-        value="M-C"
-        checked={form.medida === "M-C"}
-        onChange={() => setForm({ ...form, medida: "M-C" })}
-        className="hidden"
-      />
-      M-C
-    </label>
+  <label
+    className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
+      ${
+        form.medida === "( M - C )"
+          ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
+          : "bg-white text-gray-700 hover:bg-gray-100"
+      }
+    `}
+  >
+    <input
+      type="radio"
+      name="medida_petite"
+      value="( M - C )"
+      checked={form.medida === "( M - C )"}
+      onChange={() => setForm({ ...form, medida: "( M - C )" })}
+      className="hidden"
+    />
+    ( M - C )
+  </label>
 
-    <label
-      className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
-        ${
-          form.medida === "L-C"
-            ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
-            : "bg-white text-gray-700 hover:bg-gray-100"
-        }
-      `}
-    >
-      <input
-        type="radio"
-        name="medida_petite"
-        value="L-C"
-        checked={form.medida === "L-C"}
-        onChange={() => setForm({ ...form, medida: "L-C" })}
-        className="hidden"
-      />
-      L-C
-    </label>
-  </div>
+  <label
+    className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
+      ${
+        form.medida === "( L - C )"
+          ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
+          : "bg-white text-gray-700 hover:bg-gray-100"
+      }
+    `}
+  >
+    <input
+      type="radio"
+      name="medida_petite"
+      value="( L - C )"
+      checked={form.medida === "( L - C )"}
+      onChange={() => setForm({ ...form, medida: "( L - C )" })}
+      className="hidden"
+    />
+    ( L - C )
+  </label>
 </div>
+
          
           <option value="" disabled>
             Selecciona una medida
