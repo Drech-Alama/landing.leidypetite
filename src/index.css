@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .whatsapp-float::after {
   content: "Escríbenos";
   position: absolute;
