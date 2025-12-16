@@ -16,8 +16,6 @@ export default function Formulario() {
   const endpoint =
     "https://script.google.com/macros/s/AKfycbyLB4YvIrG_sQAU4Oy0xbFT3yrRQ9Q_qsYhlDQHeZ_ORQ6w5CKgEWkpN4r0i_bnC403/exec";
 
-  const medidas = ["XS-C", "S-C", "M-C", "LC"];
-
   const provincias = {
     Lima: [
       "Ancón",
@@ -218,11 +216,10 @@ export default function Formulario() {
           className="w-full border p-2 rounded"
         >
           <option value="">Selecciona una medida</option>
-          {medidas.map((m) => (
-            <option key={m} value={m}>
-              {m}
-            </option>
-          ))}
+          <option value="XS-C">XS-C</option>
+          <option value="S-C">S-C</option>
+          <option value="M-C">M-C</option>
+          <option value="LC">LC</option>
         </select>
 
         <select
