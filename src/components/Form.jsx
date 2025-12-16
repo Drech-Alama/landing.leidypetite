@@ -5,7 +5,7 @@ import { bottomToTop } from "../animations/scrollVariants";
 export default function Formulario() {
   const [form, setForm] = useState({
     nombre: "",
-    medida: "",
+    medida_petite: "",
     provincia: "",
     distrito: "",
     correo: "",
@@ -209,7 +209,7 @@ export default function Formulario() {
         />
 
        <select
-          name="medida"
+          name="medida_petite"
           value={form.medida}
           onChange={handleChange}
           required
