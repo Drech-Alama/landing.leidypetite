@@ -215,7 +215,7 @@ export default function Formulario() {
         <label
           className={`cursor-pointer border rounded p-2 text-center text-sm font-semibold transition
             ${
-              form.medida === "( X - C )"
+              form.medida === "( XS - C )"
                 ? "bg-[var(--color-medio)] text-white border-[var(--color-medio)]"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }
@@ -223,10 +223,10 @@ export default function Formulario() {
         >
           <input
             type="radio"
-            name="medida_petite"
+            name="medida"
             value="( XS - C )"
-            checked={form.medida === "( X - C )"}
-            onChange={() => setForm({ ...form, medida: "( X - C )" })}
+            checked={form.medida === "( XS - C )"}
+            onChange={() => setForm({ ...form, medida: "( XS - C )" })}
             required
             className="hidden"
           />
@@ -244,7 +244,7 @@ export default function Formulario() {
         >
           <input
             type="radio"
-            name="medida_petite"
+            name="medida"
             value="( S - C )"
             checked={form.medida === "( S - C )"}
             onChange={() => setForm({ ...form, medida: "( S - C )" })}
@@ -264,7 +264,7 @@ export default function Formulario() {
         >
           <input
             type="radio"
-            name="medida_petite"
+            name="medida"
             value="( M - C )"
             checked={form.medida === "( M - C )"}
             onChange={() => setForm({ ...form, medida: "( M - C )" })}
@@ -284,7 +284,7 @@ export default function Formulario() {
         >
           <input
             type="radio"
-            name="medida_petite"
+            name="medida"
             value="( L - C )"
             checked={form.medida === "( L - C )"}
             onChange={() => setForm({ ...form, medida: "( L - C )" })}
