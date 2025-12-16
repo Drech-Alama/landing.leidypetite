@@ -223,7 +223,7 @@ export default function Formulario() {
           <option value="XS-C">XS-C</option>
           <option value="S-C">S-C</option>
           <option value="M-C">M-C</option>
-          <option value="LC">LC</option>
+          <option value="L-C">L-C</option>
         </select>
 
         <select
