@@ -102,7 +102,7 @@ export default function MotivationalSection({
 
             <div className="mt-2 flex gap-3">
              <a
-              href="https://ciaobella.pe/collections/petite-1?srsltid=AfmBOor2LVNX7CS_937kTyfDI_PPVV_re821JNt-Zm_ipRvSPFugKxfI"
+              href="https://leidy-petite-ecommerce.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-4 py-2 rounded-lg font-medium shadow-sm bg-[var(--color-medio)] text-white"
