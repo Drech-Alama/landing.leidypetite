@@ -44,7 +44,7 @@ export default function GaleriaResponsive() {
           cualquier ocasión.
         </p>
         <a
-          href="https://ciaobella.pe/collections/petite-1?srsltid=AfmBOor2LVNX7CS_937kTyfDI_PPVV_re821JNt-Zm_ipRvSPFugKxfI"
+          href="https://leidy-petite-ecommerce.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-block px-8 py-3 bg-[var(--color-medio)] shadow-lg text-white rounded-lg text-lg font-medium transition"
